@@ -293,8 +293,8 @@ export const education = [
   {
     title: "MBA (Online)",
     place: "Vellore Institute of Technology (VIT)",
-    period: "Pursuing",
-    note: "",
+    period: "2024 – Present",
+    note: "Project: feasibility of a configurable, low-code SaaS platform for SMEs, based on a survey of 60 SME owners and managers in Tamil Nadu.",
   },
   {
     title: "BE, Computer Science & Engineering",
