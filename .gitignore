@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Personal job-portal notes (not part of the site)
+resume/job-portal-profiles.md
+mouna-logo.png
