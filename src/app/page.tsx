@@ -400,7 +400,7 @@ function Experience() {
                 <p className="font-display text-lg font-bold">{ed.title}</p>
                 <p className="mt-1 text-muted">{ed.place}</p>
                 <p className="mt-1 text-sm font-medium text-primary">{ed.period}</p>
-                <p className="mt-3 text-sm text-muted">{ed.note}</p>
+                {ed.note && <p className="mt-3 text-sm text-muted">{ed.note}</p>}
               </div>
             ))}
           </aside>

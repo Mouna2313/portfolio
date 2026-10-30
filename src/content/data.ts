@@ -11,6 +11,9 @@ export const profile = {
   email: "mounajeya@gmail.com",
   linkedin: "https://www.linkedin.com/in/mounajeyaseeli",
   github: "https://github.com/Mouna2313",
+  site: "https://mounajeyaseeli.vercel.app",
+  // Google Search Console "HTML tag" verification code (the content="..." value). Leave "" until you have it.
+  googleVerification: "",
   // Built from resume/resume.html with `npm run resume`. Set to "" to hide the download buttons.
   resume: "/resume.pdf",
   photo: "/mouna.webp",
@@ -287,6 +290,12 @@ export const skills = [
 ];
 
 export const education = [
+  {
+    title: "MBA (Online)",
+    place: "Vellore Institute of Technology (VIT)",
+    period: "Pursuing",
+    note: "",
+  },
   {
     title: "BE, Computer Science & Engineering",
     place: "UCEN, Anna University, Nagercoil",

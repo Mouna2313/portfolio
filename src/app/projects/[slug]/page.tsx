@@ -6,7 +6,7 @@ import { accents } from "@/components/accents";
 import { Footer, Header, SkipLink } from "@/components/Chrome";
 import { Reveal } from "@/components/Reveal";
 import { TechChip } from "@/components/TechIcon";
-import { profile, projects } from "@/content/data";
+import { projects } from "@/content/data";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -17,7 +17,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const p = projects.find((x) => x.slug === slug);
-  return p ? { title: `${p.name} · ${profile.name}`, description: p.summary } : {};
+  return p ? { title: p.name, description: p.summary, alternates: { canonical: `/projects/${p.slug}` } } : {};
 }
 
 export default async function ProjectPage({ params }: Props) {
