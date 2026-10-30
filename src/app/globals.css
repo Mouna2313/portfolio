@@ -1,26 +1,125 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #faf8f4;
+  --surface: #ffffff;
+  --surface-2: #f2efe8;
+  --text: #191a2e;
+  --muted: #545970;
+  --primary: #2d2b8f;
+  --primary-soft: #e9e8fb;
+  --accent: #b8430b;
+  --accent-soft: #fdeee4;
+  --border: #e4e0d7;
+  --ring: #2d2b8f;
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  --bg: #0e0f1d;
+  --surface: #16172a;
+  --surface-2: #1d1f36;
+  --text: #edecf6;
+  --muted: #a9abc2;
+  --primary: #aeb0ff;
+  --primary-soft: #25275a;
+  --accent: #ff9d5c;
+  --accent-soft: #3a2418;
+  --border: #2b2d48;
+  --ring: #aeb0ff;
+  color-scheme: dark;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-primary: var(--primary);
+  --color-primary-soft: var(--primary-soft);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-line: var(--border);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-jakarta);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+:focus-visible {
+  outline: 3px solid var(--ring);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Scroll reveal: only hides content once JS has loaded, and never with reduced motion. */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.js .reveal[data-visible] {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.bg-grid {
+  background-image: linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, #000 30%, transparent 75%);
+}
+
+.text-gradient {
+  background: linear-gradient(100deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+.animate-marquee {
+  animation: marquee 40s linear infinite;
+}
+.marquee:hover .animate-marquee {
+  animation-play-state: paused;
+}
+
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
 }

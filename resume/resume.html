@@ -1,0 +1,121 @@
+<!doctype html>
+<!-- Source for public/resume.pdf. Edit here, then run: npm run resume -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Mounajeyaseeli J - Resume</title>
+<style>
+  /* Readability: 10.3pt body, 1.5 line height, AA+ contrast on every colour (all at least 7:1 except the title, 5.6:1 at large size). */
+  @page { size: A4; margin: 14mm 15mm; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: "Segoe UI", Arial, sans-serif; font-size: 10.3pt; line-height: 1.45; color: #1f2230; }
+  a { color: #2d2b8f; text-decoration: none; }
+  header { border-bottom: 2px solid #2d2b8f; padding-bottom: 10px; margin-bottom: 4px; }
+  h1 { margin: 0; font-size: 23pt; line-height: 1.15; letter-spacing: 0.5px; color: #1c1b5e; }
+  .title { margin: 3px 0 7px; font-size: 12.5pt; font-weight: 600; color: #a33a08; }
+  .contact { font-size: 10pt; color: #3d4256; }
+  .contact span + span::before { content: "  |  "; color: #6b6f85; white-space: pre; }
+  h2 { margin: 14px 0 6px; font-size: 11pt; text-transform: uppercase; letter-spacing: 1.2px; color: #2d2b8f; border-bottom: 1px solid #cfcee0; padding-bottom: 3px; break-after: avoid; }
+  h3 { margin: 0; font-size: 10.3pt; font-weight: 400; }
+  p { margin: 0; }
+  ul { margin: 5px 0 0; padding-left: 17px; }
+  li { margin: 3px 0; padding-left: 2px; break-inside: avoid; }
+  .job { margin-top: 10px; }
+  .job:first-of-type { margin-top: 0; }
+  .job-head { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; break-after: avoid; }
+  .job-head strong { font-size: 11pt; color: #1c1b5e; }
+  .job-head .co { font-weight: 600; }
+  .date { white-space: nowrap; font-size: 10pt; font-weight: 600; color: #3d4256; }
+  .sub { margin: 10px 0 2px; font-weight: 700; font-size: 10.3pt; color: #1c1b5e; break-after: avoid; }
+  .stack { display: block; margin-top: 1px; font-size: 9.8pt; color: #3d4256; }
+  .stack::before { content: "Stack: "; font-weight: 600; }
+  .skills p { margin: 3px 0; }
+  .skills b { color: #1c1b5e; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>MOUNAJEYASEELI J</h1>
+  <p class="title">Software Engineer</p>
+  <p class="contact">
+    <span>Madurai, Tamil Nadu</span><span>+91 73395 11741</span><span><a href="mailto:mounajeya@gmail.com">mounajeya@gmail.com</a></span><span><a href="https://www.linkedin.com/in/mounajeyaseeli">linkedin.com/in/mounajeyaseeli</a></span>
+    <!-- Portfolio: planned Vercel address, update once deployed (also metadataBase in src/app/layout.tsx). -->
+    <br><span>Portfolio: <a href="https://mounajeyaseeli.vercel.app">mounajeyaseeli.vercel.app</a></span>
+  </p>
+</header>
+
+<h2>Profile summary</h2>
+<p>
+  Software Engineer with 5.5+ years of experience building accessible, scalable web products across banking, pensions,
+  wealth management, capital-markets compliance, e-commerce and lending. Works across the stack: Angular, React and Next.js
+  on the front end, NestJS, Prisma and PostgreSQL/MySQL on the back end, and Docker, Kubernetes, AWS and Azure for delivery.
+  Core contributor to a JSON-driven low-code platform, with a strong focus on WCAG 2.1 accessibility, reusable component
+  libraries and configurable workflows that cut development effort.
+</p>
+
+<h2>Skills</h2>
+<div class="skills">
+  <p><b>Frontend:</b> Angular, React, Next.js, TypeScript, JavaScript, HTML5, CSS3/SCSS, Tailwind CSS, Angular Material, Material UI, Radix UI, Ionic</p>
+  <p><b>Backend:</b> NestJS, Node.js, REST APIs, Prisma ORM, JWT/OAuth, Keycloak SSO, BullMQ, Socket.IO</p>
+  <p><b>Databases:</b> PostgreSQL, MySQL, Redis, MinIO/S3</p>
+  <p><b>DevOps &amp; Cloud:</b> Docker, Kubernetes, Nginx, AWS, Azure Pipelines, CI/CD, Git, GitHub, Bitbucket</p>
+  <p><b>Platforms:</b> Low-code / JSON-driven forms and journeys, workflow engines (Netflix Conductor), multi-tenant architecture, RBAC/ABAC, dynamic validation</p>
+  <p><b>Accessibility:</b> WCAG 2.1, W3C standards, semantic HTML, ARIA, keyboard navigation, responsive design</p>
+  <p><b>E-commerce:</b> Shopify themes (Liquid), WooCommerce</p>
+  <p><b>Tools:</b> Claude Code (AI-assisted development), VS Code, Postman</p>
+</div>
+
+<h2>Work experience</h2>
+
+<div class="job">
+  <div class="job-head"><h3><strong>Software Engineer</strong> - <span class="co">Fintuple</span>, Chennai</h3><span class="date">Apr 2024 - Present</span></div>
+  <ul>
+    <li><b>Low-code platform (Finwyze):</b> Core contributor to a domain-agnostic low-code platform that generates full applications from JSON configurations: multi-step journeys, forms, conditional logic, validations, approval chains and audit trails.</li>
+    <li><b>Component library and design system:</b> Built a reusable Angular library (dynamic forms, data tables, steppers, modals, layouts) and a central SCSS system for consistent theming and responsiveness across products.</li>
+    <li><b>Validation framework:</b> Built rule-based validation for PAN, Aadhaar, GSTIN, IFSC and MICR, cross-field checks, document constraints and business rules.</li>
+    <li><b>Multi-tenancy and access control:</b> Tenant-isolated architecture with RBAC/ABAC, maker-checker-approver flows, configurable permissions and white-labelling.</li>
+    <li><b>Integrations:</b> CKYC, DigiLocker, Aadhaar e-sign, CAMSPay and eNACH payments, record-keeping agencies, SMS and email gateways.</li>
+  </ul>
+
+  <h3 class="sub">Key projects</h3>
+  <ul>
+    <li><b>Foreign Custody Onboarding - Kotak Mahindra Bank, ICICI Bank:</b> Onboarding for Foreign Portfolio Investors and related parties, with KYC/AML checks, document generation, maker-checker approvals, Keycloak SSO and audit reports. <span class="stack">NestJS, Prisma, MySQL (AWS RDS), Netflix Conductor, Redis, Next.js, Material UI, Kubernetes</span></li>
+    <li><b>Nivruti - SBI Pension Funds:</b> National Pension System platform covering subscriber, corporate and agent onboarding, CRA registration (Protean, KFintech), payments and ledger-based contribution processing. <span class="stack">NestJS, Prisma, PostgreSQL, BullMQ, Socket.IO, Next.js, Radix UI</span></li>
+    <li><b>Watch Tower 360:</b> SEBI insider-trading (PIT) compliance platform for asset management companies, with trade pre-clearance, a rule engine, live Account Aggregator trade data and automatic violation alerts. <span class="stack">NestJS, PostgreSQL, BullMQ, NATS, MinIO, Next.js, Tailwind CSS</span></li>
+    <li><b>WealthServ 2.0 - CAMS:</b> Multi-tenant AIF/PMS investor onboarding with a ten-step journey from KYC to e-sign and RTA submission, built as a Turborepo monorepo. <span class="stack">NestJS, PostgreSQL, Redis, NATS, Next.js, Zod, Grafana</span></li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="job-head"><h3><strong>HTML Developer</strong> - <span class="co">RRD GO Creative</span>, Chennai</h3><span class="date">Feb 2022 - Apr 2024</span></div>
+  <ul>
+    <li><b>Shopify theme development:</b> Built and customised Shopify themes for e-commerce brands, from design files to live stores, managing layouts, sections and dynamic data with Liquid.</li>
+    <li><b>Accessibility development and fixes:</b> Implemented W3C and WCAG standards across client sites and resolved accessibility issues: semantic markup, ARIA, keyboard navigation, focus states and colour contrast.</li>
+    <li><b>Responsive UI:</b> Built pixel-perfect, responsive interfaces, working with designers, backend and QA teams to keep visual standards consistent.</li>
+    <li><b>Email templates and dashboards:</b> Created email templates that render consistently across mail clients, and worked on Angular admin dashboards with reusable components and API integrations.</li>
+    <li><b>CSS architecture:</b> Improved CSS structure, responsiveness and performance across projects.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="job-head"><h3><strong>Front End Developer</strong> - <span class="co">Haso Technology</span>, Madurai</h3><span class="date">Mar 2021 - Feb 2022</span></div>
+  <ul>
+    <li><b>Client projects:</b> Contributed to 8+ client projects across lending, e-commerce, healthcare and e-learning using Angular, Next.js and Ionic.</li>
+    <li><b>Web applications:</b> Built a loan management web app with its admin module and admin dashboards in Angular, and worked on an online medicine platform (Angular, Contentful) and an e-learning app (Next.js).</li>
+    <li><b>Integrations and maintenance:</b> Integrated REST APIs, including WooCommerce, and handled bug fixes, enhancements and performance improvements.</li>
+  </ul>
+</div>
+
+<h2>Personal project</h2>
+<p><b>Daybook:</b> Full-stack daily health log for food, activity, sleep, medicines and body measurements, with a diet plan, nutrition totals and secure sign-in. Used daily. <span class="stack">NestJS, Prisma, PostgreSQL (Neon), JWT, Next.js, TanStack Query, Tailwind CSS, Docker, Render</span></p>
+
+<h2>Education</h2>
+<div class="job-head"><h3><b>BE, Computer Science &amp; Engineering</b> - UCEN, Anna University, Nagercoil</h3><span class="date">2017 - 2021</span></div>
+<p>CGPA 7.5. Vice President of the department association; Captain of the college sports committee.</p>
+
+<h2>Languages</h2>
+<p>English, Tamil</p>
+
+</body>
+</html>
